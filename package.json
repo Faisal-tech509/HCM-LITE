@@ -1,0 +1,17 @@
+{
+  "name": "hcm-lite-hackathon",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": ["frontend", "backend"],
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB -c blue,green \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "npm run dev --workspace=hcm-lite-backend",
+    "dev:frontend": "npm run dev --workspace=hcm-lite-frontend",
+    "build": "npm run build --workspace=hcm-lite-frontend",
+    "start": "npm run start --workspace=hcm-lite-backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

@@ -1,0 +1,13 @@
+HCM Lite — Quick Start (Windows / VS Code)
+
+1. Install Node.js LTS and MongoDB Community Server, or create a MongoDB Atlas database.
+2. Extract this ZIP and open the top-level HCM_Lite_Hackathon folder in VS Code.
+3. Copy backend/.env.example to backend/.env. Set MONGODB_URI and a long random JWT_SECRET. See README.md.
+4. Start MongoDB locally (or paste your Atlas URI in backend/.env).
+5. Open VS Code Terminal at the TOP-LEVEL project folder and run:
+       npm install
+       npm run dev
+6. Open http://localhost:5173 in your browser. If the database is new, use the first-run setup screen to create the company and Admin account.
+7. Admin creates HR logins, HR registers employees, and each new account receives a temporary password that must be changed on first sign-in. If HR also needs their own attendance/leave self-service, link that HR login to an Employee ID.
+
+This build intentionally starts with no employee, attendance, leave, or payroll demo records. Use your own records in the application.
